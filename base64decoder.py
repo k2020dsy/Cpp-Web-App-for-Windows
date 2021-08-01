@@ -1,10 +1,11 @@
 import os,base64,sys
 
 #start from here
+#pack in python3
 
 str1 = ''
 Saveas = sys.argv[1]
-# 打开文件
+# Read file
 Base64FileCache = open("base64cache.cache", "r")
 
 for line in Base64FileCache.readlines():                          #依次读取每行  
@@ -12,7 +13,7 @@ for line in Base64FileCache.readlines():                          #依次读取�
     str1 = str1 + line;
     print ("读取的数据为: %s" % (line))
  
-# 关闭文件
+# close file
 Base64FileCache.close()
 
 if len(Saveas) :# 把字符串还原成图片
